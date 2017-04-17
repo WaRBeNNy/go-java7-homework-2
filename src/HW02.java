@@ -28,17 +28,17 @@ public class HW02 {
         int nums[] = new int[5];
         Scanner sc = new Scanner(System.in);
 
-        for(int i=0;i<5;i++) {
+        for(int i=0;i<nums.length;i++) {
             System.out.println("Enter number " + (i+1) + ":");
             nums[i] = sc.nextInt();
         }
 
         System.out.print("Initial array: ");
-        for(int i=0; i<5; i++)
+        for(int i=0; i<nums.length; i++)
             System.out.print(nums[i] + " ");
         System.out.println();
 
-        for(int i=4; i>0; i--) {
+        for(int i=(nums.length - 1); i>0; i--) {
             for (int j = 0; j < i; j++) {
                 if (nums[j] > nums[j + 1]) {
                     int tmp = nums[j];
@@ -48,7 +48,7 @@ public class HW02 {
             }
         }
         System.out.print("Sorted array: ");
-        for(int i=0; i<5; i++)
+        for(int i=0; i<nums.length; i++)
             System.out.print(nums[i] + " ");
     }
 }
